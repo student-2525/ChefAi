@@ -1,0 +1,175 @@
+/* Fullscreen gradient background */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e1e3f, #4a105a);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Centered login box */
+.login-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 340px;
+  backdrop-filter: blur(8px);
+  color: #fff;
+}
+
+/* Logo and heading */
+.login-logo h2 {
+  margin-top: 6px;
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.login-logo p {
+  color: #b3b3b3;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.login-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers logo horizontally */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #6d28d9, #9333ea);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+  margin: 0 auto 12px auto; /* Centers icon block */
+}
+
+
+/* Input fields */
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  color: #bcbcbc;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff10;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  background: #ffffff20;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6d28d9, #9333ea);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: scale(1.03);
+}
+
+/* Divider line */
+.divider {
+  margin: 20px 0;
+  color: #999;
+  font-size: 0.85rem;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: #555;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* “Don’t have an account?” text */
+/* “Don’t have an account?” text */
+.account-text {
+  color: #bcbcbc;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+/* Link-style buttons */
+.link-btn {
+  background: none;
+  border: none;
+  color: #a78bfa;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+/* Center the links */
+.link-btn,
+.account-text,
+.admin-link {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+/* Admin Login link */
+.admin-link {
+  color: #9d86e9;
+  margin-top: 10px;
+}
+
+.link-btn:hover {
+  opacity: 0.8;
+}
+
+.no-account {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+.admin-link {
+  margin-top: 10px;
+  display: block;
+}

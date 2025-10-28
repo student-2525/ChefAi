@@ -1,0 +1,97 @@
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #1b1b2f, #3d155f);
+  font-family: "Poppins", sans-serif;
+}
+
+.register-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  backdrop-filter: blur(15px);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+.register-logo .icon {
+  font-size: 40px;
+  background: #6a5acd;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.register-logo h2 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.register-logo p {
+  color: #bdbdbd;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.flex-row {
+  display: flex;
+  gap: 10px;
+}
+
+.register-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #6a5acd, #9b59b6);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: linear-gradient(90deg, #9b59b6, #6a5acd);
+}
+
+.already-account {
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.already-account span {
+  color: #9b59b6;
+  cursor: pointer;
+  font-weight: 500;
+}

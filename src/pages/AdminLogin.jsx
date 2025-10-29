@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/adminLogin.css";
 
-const AdminLogin = () => {
+const AdminLogin = ({ setIsAuthenticated }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -12,10 +12,11 @@ const AdminLogin = () => {
 
     // ✅ Only allow specific admin credentials
     if (email === "admin@gmail.com" && password === "Admin@123") {
-      alert("Admin login successful!");
-      navigate("/"); // redirect to main dashboard
+      alert("✅ Admin login successful!");
+      setIsAuthenticated(true); // ✅ Marks admin as authenticated
+      navigate("/"); // ✅ Go directly to ChefBOT dashboard
     } else {
-      alert("Invalid admin credentials!");
+      alert("❌ Invalid admin credentials!");
     }
   };
 
@@ -30,15 +31,17 @@ const AdminLogin = () => {
           <p>SGH Hospital Management</p>
           <span className="admin-badge">Administrator Access</span>
         </div>
-<br/>
+
+        <br />
+
         <div className="default-credentials">
-          <i class='fas fa-exclamation-circle'></i>&nbsp;
-          Default credentials: <b>admin / Admin@123</b>
+          <i className="fas fa-exclamation-circle"></i>&nbsp;
+          Default credentials: <b>@gmail.com</b> / <b>Admin@123</b>
         </div>
 
         <form onSubmit={handleSubmit}>
           <div className="input-group">
-            <label>Username</label>
+            <label>Email</label>
             <input
               type="email"
               placeholder="admin@gmail.com"

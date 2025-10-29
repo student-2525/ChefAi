@@ -9,8 +9,8 @@ import {
 // ✅ Import all pages
 import LoginPage from "./pages/LoginPage";
 import CreateAccount from "./pages/CreateAccount";
-import AdminLogin from "./pages/AdminLogin"; // ✅ new admin portal
-import Index from "./pages/Index"; // main ChefBOT dashboard
+import AdminLogin from "./pages/AdminLogin"; // ✅ Admin portal
+import Index from "./pages/Index"; // ✅ Main ChefBOT dashboard
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* 🔐 Login Page */}
+        {/* 🔐 User Login Page */}
         <Route
           path="/login"
           element={<LoginPage setIsAuthenticated={setIsAuthenticated} />}
@@ -27,18 +27,17 @@ function App() {
         {/* 🧾 Create Account Page */}
         <Route path="/create-account" element={<CreateAccount />} />
 
-        {/* 🛡️ Admin Login Page */}
-        <Route path="/admin" element={<AdminLogin />} />
+        {/* 🛡️ Admin Login Page (passes setIsAuthenticated too ✅) */}
+        <Route
+          path="/admin"
+          element={<AdminLogin setIsAuthenticated={setIsAuthenticated} />}
+        />
 
-        {/* 🍳 Protected Main Page (ChefBOT Dashboard) */}
+        {/* 🍳 Protected ChefBOT Dashboard */}
         <Route
           path="/"
           element={
-            isAuthenticated ? (
-              <Index />
-            ) : (
-              <Navigate to="/login" replace />
-            )
+            isAuthenticated ? <Index /> : <Navigate to="/login" replace />
           }
         />
 

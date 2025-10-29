@@ -54,7 +54,7 @@ const CreateAccount = () => {
             <input
               type="email"
               name="email"
-              placeholder="anas@gmail.com"
+              placeholder="example@gmail.com"
               value={formData.email}
               onChange={handleChange}
               required
